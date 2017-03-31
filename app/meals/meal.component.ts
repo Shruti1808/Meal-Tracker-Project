@@ -6,6 +6,7 @@ import { Meal } from './meal.model';
  selector:'show-meals',
  template:`
 
+ 
  <p>{{Name: meal.mealName}}</p>
  <p>{{Details: meal.details}}</p>
  <p>{{Calories: meal.calories}}</p>
