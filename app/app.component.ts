@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Meal } from './meal.model';
+import { MealFormComponent } from './meal-form.component';
 
 
 
@@ -13,6 +14,9 @@ import { Meal } from './meal.model';
   </div>
 
   <meal-list></meal-list>
+  <meal-form></meal-form>
+
+
   `
 })
 
