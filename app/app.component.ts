@@ -14,10 +14,11 @@ import { Meal } from './meal.model';
     <meal-list [childMealList]="masterMealsList" (clickSender)= "editMeal($event)"></meal-list>
     <new-meal (newMealSender)="addMeal($event)"></new-meal>
     <hr>
-    <edit-meals[childSelectedMeal] = "selectedMeal" (doneButtonClickedSender)="hideEdit()"></edit-meals>
+    <edit-meals [childSelectedMeal] = "selectedMeal" (doneButtonClickedSender)="hideEdit()"></edit-meals>
 
     `
 })
+
 
 export class AppComponent {
     meals : Meal[] = [];

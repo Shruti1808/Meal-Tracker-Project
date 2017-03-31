@@ -13,6 +13,7 @@ import { Meal } from './meal.model';
     <label for="name">Name:</label>
     <input class="form-control input-md" placeholder="Name" #newName>
     </div>
+
     <div class="form-group col-md-4">
     <label for="name">Details:</label>
     <input class="form-control input-md" placeholder="Details" #newDetails>
@@ -24,21 +25,17 @@ import { Meal } from './meal.model';
     </div>
 
     <br>
-    <button (click)="submitForm(newName.value, newDetails.value, newCalories.value;newName.value = "",
-    newDetails.value = "",
-    newCalories.value = "")" class="btn-new-meal">Add</button>
+    <button class=" btn btn-new-meal btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value);newName.value = '',
+    newDetails.value = '', newCalories.value = '';">Add</button>
     </div>
     `
 })
 
 export class NewMealComponent {
-    meals : Meal[];
     @Output() newMealSender = new EventEmitter();
-    submitForm(name: string, details: string, calories:number){
+
+    submitForm(name: string, details: string, calories: number){
         var newMealToAdd : Meal = new Meal(name, details, calories);
         this.newMealSender.emit(newMealToAdd);
-
-
-        console.log("Creating meal...")
     }
 }
