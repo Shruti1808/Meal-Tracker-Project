@@ -16,6 +16,7 @@ import { NewMealComponent } from './new-meal.component';
     </ul>
   </div>
 
+<div class ="container">
   <div class="form">
       <div class="form-fields">
         <label>By Calories:</label>
@@ -25,8 +26,9 @@ import { NewMealComponent } from './new-meal.component';
           <option value="high">Meals with more than 300 calories</option>
         </select>
       </div>
+      </div>
     </div>
-
+<div class ="container">
     <div class="table-responsive">
     <table class="table table-hover">
    <thead>
@@ -76,6 +78,7 @@ import { NewMealComponent } from './new-meal.component';
      </tr>
    </tbody>
  </table>
+    </div>
     </div>
   `
 })
