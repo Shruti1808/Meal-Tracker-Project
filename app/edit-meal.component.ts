@@ -5,35 +5,31 @@ import { Meal } from './meal.model';
 @Component({
     selector: 'edit-meals',
     template:`
-    <div class="edit" *ngIf ="selectedMeal">
-        <h3>Edit Description:</h3>
+    <div class="edit" *ngIf ="childSelectedMeal">
+        <h3>Edit Meal:</h3>
         <h3>{{selectedMeal.mealName}}</h3>
         <hr>
+
         <label for="meal-name">Enter Name: </label>
-        <input [(ngModel)] = "selectedMeal.mealName" type="text" name = "selected-name">
+        <input [(ngModel)] = "childSelectedMeal.mealName" type="text" >
 
         <label for="meal-details">Enter Details: </label>
-        <input [(ngModel)] = "selectedMeal.details" type="text" name = "selected-detail">
+        <input [(ngModel)] = "childSelectedMeal.details" type="text" >
 
         <label for="meal-name">Enter Calories: </label>
-        <input [(ngModel)] = "selectedMeal.calories" type="number" name = "selected-calories">
+        <input [(ngModel)] = "childSelectedMeal.calories" type="number">
 
-        <button (click)="editMeal(clickedMeal)" name="button">Edit</button>
-        <button (click)="hideEdit()" name="button">Save</button>
-
-
+        <button  class= "col-md-4 btn btn-success" (click)="doneButtonClicked()" name="button">Done</button>
     </div>
     `
 })
 
 export class EditMealComponent {
-    @Input() selectedMeal = Meal;
+    @Input() childSelectedMeal : Meal;
+    @Output() doneButtonClickedSender = new EventEmitter();
 
-    editMeal(clickedMeal){
-        this.selectedMeal = clickedMeal;
-    }
+    doneButtonClicked() {
+    this.doneButtonClickedSender.emit();
+  }
 
-    hideEdit(){
-        this.selectedMeal = null;
-    }
 }

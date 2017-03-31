@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
 import { MealListComponent }  from './meal-list.component';
 import { FormsModule }  from '@angular/forms';
-import { MealFormComponent } from './meal-form.component';
 import { EditMealComponent } from './edit-meal.component';
+import { NewMealComponent } from './new-meal.component';
 
 
 @NgModule({
   imports: [ BrowserModule , FormsModule ],
-  declarations: [ AppComponent, MealListComponent, MealFormComponent, EditMealComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, MealListComponent, EditMealComponent , NewMealComponent],
+  bootstrap: [ AppComponent ]
 })
 
 export class AppModule { }
