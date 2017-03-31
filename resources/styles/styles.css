@@ -5,6 +5,21 @@ body {
     font-weight: bold;
 }
 
+.jumbotron{
+    width: 900px;
+    height: 150px;
+}
+
+.main-header img{
+    /*background-image: url("./resources/img/pic1.jpeg");*/
+    height: 800px;
+    width :100%;
+    background-size: contain;
+    box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.5);;
+    border-radius: 15px;
+}
+
+
 
 /*.meal-panel {
     background-color: white;
@@ -17,4 +32,6 @@ body {
 
 .table{
     padding:  0px 2px 0px 2px;
+    color: black;
+
 }

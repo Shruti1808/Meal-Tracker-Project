@@ -77,8 +77,6 @@ import { NewMealComponent } from './new-meal.component';
    </tbody>
  </table>
     </div>
-
-
   `
 })
 
