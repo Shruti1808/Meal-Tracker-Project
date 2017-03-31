@@ -3,7 +3,7 @@ import { Meal } from './meal.model';
 
 @Component({
     selector: "meal-form",
-    templateUrl: 'app/student-form.component.html'
+    templateUrl: 'app/meal-form.component.html'
 
 
 
@@ -11,12 +11,12 @@ import { Meal } from './meal.model';
 
 
 export class MealFormComponent {
-    meals : Meal[];
+     meals : Meal[];
 
 
-    submitMeal(){
-        this.meals = new Meal(name, details, calories);
-    }
+    // submitMeal(){
+    //     // this.meals = new Meal();
+    // }
 
 
 }
