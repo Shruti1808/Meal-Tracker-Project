@@ -31,7 +31,7 @@ export class AppComponent {
         new Meal("Fries", "I only ate half of them.", 365),
         new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354),
         new Meal("Vegan Burger", "Ordered a salad on the side instead of fries.", 375),
-        new Meal("Chocolate Chunk and Walnut Oatmeal Cookies", "Ordered a salad on the side instead of fries.", 100)
+        new Meal("Chocolate Chunk and Walnut Oatmeal Cookies", "I liked it.", 100)
     ];
 
     editMeal(clickedMeal){

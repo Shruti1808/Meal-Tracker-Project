@@ -25,8 +25,7 @@ import { Meal } from './meal.model';
     </div>
 
     <br>
-    <button class=" btn btn-new-meal btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value);newName.value = '',
-    newDetails.value = '', newCalories.value = '';">Add</button>
+     <button class="col-md-4 btn btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
     `
 })
