@@ -1,0 +1,14 @@
+{
+  "name": "meal-tracker",
+  "description": "independent angular 2 project",
+  "main": "",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
