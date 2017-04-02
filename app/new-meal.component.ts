@@ -9,23 +9,23 @@ import { Meal } from './meal.model';
     <div class="meal-form">
 
     <h3>Enter your Meal:</h3>
-    <div class="form-group col-md-4">
+    <div class="form-group col-xs-3">
     <label for="name">Name:</label>
-    <input class="form-control input-md" placeholder="Name" #newName>
+    <input class="form-control" placeholder="Name" #newName>
     </div>
 
-    <div class="form-group col-md-4">
-    <label for="name">Details:</label>
-    <input class="form-control input-md" placeholder="Details" #newDetails>
+    <div class="form-group col-xs-3">
+    <label for="details">Details:</label>
+    <input class="form-control" placeholder="Details" #newDetails>
 
     </div>
-    <div class="form-group col-md-4">
-    <label for="name">Calories:</label>
-    <input class="form-control input-md" placeholder="Calories" type="number" #newCalories>
+    <div class="form-group col-xs-3">
+    <label for="calories">Calories:</label>
+    <input class="form-control" placeholder="Calories" type="number" #newCalories>
     </div>
 
     <br>
-     <button class="col-md-4 btn btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
+     <button class=" btn btn-sm-4 btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
     `
 })

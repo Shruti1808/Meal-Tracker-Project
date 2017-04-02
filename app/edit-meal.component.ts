@@ -3,32 +3,40 @@ import { Meal } from './meal.model';
 
 
 @Component({
-    selector: 'edit-meals',
-    template:`
-    <div class="edit" *ngIf ="childSelectedMeal">
-        <h3>Edit Meal:</h3>
-        <h3>{{selectedMeal.mealName}}</h3>
-        <hr>
+  selector: 'edit-meals',
+  template:`
+  <div class="edit" *ngIf ="childSelectedMeal">
+  <h3>Edit Meal:</h3>
+  <h3>{{childSelectedMeal.mealName}}</h3>
+  <hr>
+  <div class ="fieldset">
+<div class ="form-group col-xs-3">
+  <label >Enter Name: </label>
+  <input [(ngModel)] = "childSelectedMeal.mealName" class="form-control" type="text" >
+  </div>
 
-        <label for="meal-name">Enter Name: </label>
-        <input [(ngModel)] = "childSelectedMeal.mealName" type="text" >
+<div class ="form-group col-xs-3">
+  <label>Enter Details: </label>
+  <input [(ngModel)] = "childSelectedMeal.details" class="form-control" type="text" >
+  </div>
 
-        <label for="meal-details">Enter Details: </label>
-        <input [(ngModel)] = "childSelectedMeal.details" type="text" >
+<div class ="form-group col-xs-4">
+  <label>Enter Calories: </label>
+  <input [(ngModel)] = "childSelectedMeal.calories"
+  class="form-control" type="number">
+  </div>
 
-        <label for="meal-name">Enter Calories: </label>
-        <input [(ngModel)] = "childSelectedMeal.calories" type="number">
-
-        <button  class= "col-md-4 btn btn-success" (click)="doneButtonClicked()" name="button">Done</button>
-    </div>
-    `
+  <button  class= "btn-sm-4 btn btn-success" (click)="doneButtonClicked()" name="button">Done</button>
+  </div>
+  </div>
+  `
 })
 
 export class EditMealComponent {
-    @Input() childSelectedMeal : Meal;
-    @Output() doneButtonClickedSender = new EventEmitter();
+  @Input() childSelectedMeal : Meal;
+  @Output() doneButtonClickedSender = new EventEmitter();
 
-    doneButtonClicked() {
+  doneButtonClicked() {
     this.doneButtonClickedSender.emit();
   }
 

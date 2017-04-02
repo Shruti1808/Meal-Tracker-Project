@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(180deg, #9ca089, #7c806d, #4e5044, #1f201b);
+    /*background-image: linear-gradient(180deg, #9ca089, #7c806d, #4e5044, #1f201b);*/
     text-align: left;
     font-family: sans-serif;
     font-weight: bold;
@@ -10,15 +10,21 @@ body {
     height: 150px;
 }
 
-.main-header img{
-    /*background-image: url("./resources/img/pic1.jpeg");*/
-    height: 800px;
+/*.main-header img{
+    height: 600px;
     width :100%;
     background-size: contain;
     box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.5);;
     border-radius: 15px;
-}
+}*/
 
+
+/*.fieldset{
+    width: 600px;
+    height: 400px;
+    background-color: lavender;
+    border: solid 1px silver;
+}*/
 
 
 /*.meal-panel {

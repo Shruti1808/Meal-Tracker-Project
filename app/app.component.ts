@@ -12,9 +12,12 @@ import { Meal } from './meal.model';
     </div>
 
     <meal-list [childMealList]="masterMealsList" (clickSender)= "editMeal($event)"></meal-list>
+<hr>
+    <edit-meals [childSelectedMeal] = "selectedMeal" (doneButtonClickedSender)="hideEdit()"></edit-meals>
+
     <new-meal (newMealSender)="addMeal($event)"></new-meal>
     <hr>
-    <edit-meals [childSelectedMeal] = "selectedMeal" (doneButtonClickedSender)="hideEdit()"></edit-meals>
+
 
     `
 })
@@ -22,7 +25,7 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
     meals : Meal[] = [];
-    selectedMeal= null;
+    selectedMeal: Meal= null;
 
 
     masterMealsList : Meal[] = [
@@ -34,7 +37,7 @@ export class AppComponent {
         new Meal("Chocolate Chunk and Walnut Oatmeal Cookies", "I liked it.", 100)
     ];
 
-    editMeal(clickedMeal){
+    editMeal(clickedMeal:Meal){
         this.selectedMeal = clickedMeal;
     }
 
