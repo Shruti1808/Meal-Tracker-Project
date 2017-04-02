@@ -4,29 +4,32 @@ import { Meal } from './meal.model';
 @Component({
     selector: 'new-meal',
     template: `
-    <h1></h1>
-
-    <div class="meal-form">
 
     <h3>Enter your Meal:</h3>
-    <div class="form-group col-xs-3">
-    <label for="name">Name:</label>
+    <hr>
+    <fieldset>
+    <div class="form-group row">
+    <label for="name" class="col-xs-2 col-form-label">Name:</label>
+    <div class="col-xs-4">
     <input class="form-control" placeholder="Name" #newName>
     </div>
-
-    <div class="form-group col-xs-3">
-    <label for="details">Details:</label>
-    <input class="form-control" placeholder="Details" #newDetails>
-
     </div>
-    <div class="form-group col-xs-3">
-    <label for="calories">Calories:</label>
+
+    <div class="form-group  row">
+    <label for="details" class="col-sm-2 col-form-label">Details:</label>
+    <div class="col-xs-4">
+    <input class="form-control" placeholder="Details" #newDetails>
+    </div>
+    </div>
+
+    <div class="form-group  row">
+    <label for="calories"  class="col-sm-2 col-form-label">Calories:</label>
+    <div class="col-xs-4">
     <input class="form-control" placeholder="Calories" type="number" #newCalories>
     </div>
-
-    <br>
-     <button class=" btn btn-sm-4 btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
+     <button class=" btn btn-sm-4 btn-success" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
+     </fieldset>
     `
 })
 

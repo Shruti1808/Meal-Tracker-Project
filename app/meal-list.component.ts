@@ -9,6 +9,8 @@ import { NewMealComponent } from './new-meal.component';
   selector: 'meal-list',
   template: `
 <div class ="container">
+
+<br>
   <div class="form">
       <div class="form-fields">
         <label>By Calories:</label>

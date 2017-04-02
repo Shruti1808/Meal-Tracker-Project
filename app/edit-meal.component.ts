@@ -5,29 +5,33 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'edit-meals',
   template:`
-  <div class="edit" *ngIf ="childSelectedMeal">
+  <div *ngIf ="childSelectedMeal">
   <h3>Edit Meal:</h3>
   <h3>{{childSelectedMeal.mealName}}</h3>
   <hr>
-  <div class ="fieldset">
-<div class ="form-group col-xs-3">
-  <label >Enter Name: </label>
+<div class ="form-group  row ">
+  <label class="col-xs-2 col-form-label">Enter Name: </label>
+  <div class="col-xs-4">
   <input [(ngModel)] = "childSelectedMeal.mealName" class="form-control" type="text" >
   </div>
-
-<div class ="form-group col-xs-3">
-  <label>Enter Details: </label>
-  <input [(ngModel)] = "childSelectedMeal.details" class="form-control" type="text" >
   </div>
 
-<div class ="form-group col-xs-4">
-  <label>Enter Calories: </label>
+<div class ="form-group row">
+  <label class="col-xs-2 col-form-label">Enter Details: </label>
+  <div class="col-xs-4">
+  <input [(ngModel)] = "childSelectedMeal.details" class="form-control" type="text" >
+  </div>
+  </div>
+
+<div class ="form-group row">
+  <label class="col-xs-2 col-form-label">Enter Calories: </label>
+  <div class="col-xs-4">
   <input [(ngModel)] = "childSelectedMeal.calories"
   class="form-control" type="number">
   </div>
+  </div>
 
   <button  class= "btn-sm-4 btn btn-success" (click)="doneButtonClicked()" name="button">Done</button>
-  </div>
   </div>
   `
 })
